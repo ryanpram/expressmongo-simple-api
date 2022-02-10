@@ -14,7 +14,15 @@ const userSchema = mongoose.Schema({
         required: true,
         match: /.+\@.+\..+/,
         unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    token: {
+        type: String
     }
+
 });
 
 module.exports = mongoose.model("User",userSchema)
